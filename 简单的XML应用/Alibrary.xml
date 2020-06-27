@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="tohtml.xsl"?>
+<s:library xmlns:s="https://zunhuier.club"
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+xsi:schemaLocation="https://zunhuier.club library.xsd">
+
+    <s:book language="zh-CN">
+        <name>三体</name>
+        <author sex="M">刘慈欣</author>
+        <class>science history</class>
+        <publicTime>2005-05-01</publicTime>
+        <price>56.0</price>
+    </s:book>
+    <s:work>
+        <name>三体 Ⅱ 黑暗森林</name>
+        <author sex="M">刘慈欣</author>
+        <class>science history</class>
+        <publicTime>2008-05-01</publicTime>
+        <price>66.5</price>
+    </s:work>
+    <s:book language="zh-CN">
+        <name>三体 Ⅲ  死神永生</name>
+        <author>刘慈欣</author>
+        <class>science history</class>
+        <publicTime>2010-10-01</publicTime>
+        <price>99</price>
+    </s:book>
+    <s:book language="EN">
+        <name>Harry Potter</name>
+        <author sex="F">J.K.Rowling</author>
+        <class>literature</class>
+        <publicTime>1997-06-30</publicTime>
+        <price>109.1</price>
+    </s:book>
+
+</s:library>

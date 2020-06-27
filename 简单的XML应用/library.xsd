@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+targetNamespace="https://zunhuier.club"
+xmlns="https://zunhuier.club">
+
+    <!-- 定义XML文档的主体结构 -->
+    <xs:element name="library">
+        <xs:complexType>
+            <xs:choice maxOccurs="unbounded">
+                <xs:element ref="book"></xs:element>
+            </xs:choice>
+        </xs:complexType>
+    </xs:element>
+
+    <!-- 定义替换元素 -->
+    <xs:element name="book" type="singlebook"/>
+    <xs:element name="work" substitutionGroup="book"/>
+
+    <!-- 定义book元素的复杂类型 -->
+    <xs:complexType name="singlebook">
+        <xs:sequence>
+            <xs:element name="name" type="xs:string"/>
+            <xs:element name="author">
+                <xs:complexType>
+                    <xs:simpleContent>
+                        <xs:extension base="xs:string">
+                            <xs:attribute name="sex" type="xs:string" use="optional"></xs:attribute>
+                        </xs:extension>
+                    </xs:simpleContent>
+                </xs:complexType>
+            </xs:element>
+            <xs:element name="class" type="bookclass"/>
+            <xs:element name="publicTime" type="xs:date"/>
+            <xs:element name="price">
+                <xs:simpleType>
+                    <xs:restriction base="xs:decimal">
+                        <xs:minExclusive value="0"></xs:minExclusive>
+                    </xs:restriction>
+                </xs:simpleType>
+            </xs:element>
+        </xs:sequence>
+        <xs:attribute name="language" type="xs:string"></xs:attribute>
+    </xs:complexType>
+
+    <!-- 枚举图书类型，一本图书可以是多个类型 -->
+    <xs:simpleType name="bookclass">
+        <xs:list>
+            <xs:simpleType>
+                <xs:union>
+                    <xs:simpleType>
+                        <xs:restriction base="xs:string">
+                            <xs:enumeration value="social"></xs:enumeration>
+                            <xs:enumeration value="philosophy"></xs:enumeration>
+                            <xs:enumeration value="science"></xs:enumeration>
+                            <xs:enumeration value="technology"></xs:enumeration>
+                            <xs:enumeration value="literature"></xs:enumeration>
+                            <xs:enumeration value="history"></xs:enumeration>
+                        </xs:restriction>
+                    </xs:simpleType>
+                </xs:union>
+            </xs:simpleType>
+        </xs:list>
+    </xs:simpleType>
+
+</xs:schema>

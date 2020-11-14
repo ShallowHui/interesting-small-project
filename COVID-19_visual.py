@@ -114,8 +114,8 @@ def main():
             return #如果数据文件不存在，在线获取也失败，就退出程序
     finally:
         f.close()
-        casesData = getData()
 
+    casesData = getData()
     geoData = getGeoData()
     df = MergeData(casesData,geoData)
     ImgToGif(df)

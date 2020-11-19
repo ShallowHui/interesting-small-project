@@ -112,9 +112,8 @@ def main():
     except:
         if getDataFromGithub() == -1:
             return #如果数据文件不存在，在线获取也失败，就退出程序
-    finally:
-        f.close()
-
+    
+    f.close()
     casesData = getData()
     geoData = getGeoData()
     df = MergeData(casesData,geoData)

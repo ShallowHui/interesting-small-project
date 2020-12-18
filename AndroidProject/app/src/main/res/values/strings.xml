@@ -1,0 +1,17 @@
+<resources>
+    <string name="app_name">AndroidTest</string>
+    <string name="title_activity_home">HomeActivity</string>
+    <drawable name="clr_normal">#87CEFA</drawable>
+    <drawable name="clr_pressed">#ff6501</drawable>
+    <string name="basketballhistory">
+        \t\t\t篮球（basketball），是奥运会核心比赛项目，是以手为中心的身体对抗性体育运动。\n
+        \t\t\t1891年12月21日，由美国马萨诸塞州斯普林菲尔德基督教青年会训练学校体育教师詹姆士·奈史密斯发明。\n
+        \t\t\t1896年，篮球运动传入中国天津。1904年，圣路易斯奥运会上第1次进行了篮球表演赛。\n
+        \t\t\t1936年，篮球在柏林奥运会中被列为正式比赛项目，中国也首次派出篮球队参加奥运会篮球项目。1992年，巴塞罗那奥运会开始，职业选手可以参加奥运会篮球比赛。\n
+        \t\t\t篮球的最高组织机构国际篮球联合会，1932年成立，总部设在瑞士日内瓦。当代世界篮球水平最高的联赛是美国男子篮球职业联赛（NBA）比赛。\n
+        \t\t\t中国的篮球水平最高的联赛是中国职业篮球联赛（CBA）比赛。
+    </string>
+    <string name="nba">
+        \t\t\t美国职业篮球联赛（National Basketball Association），简称美职篮（NBA），是由北美30支职业球队组成的男子职业篮球联盟，是美国四大职业体育联盟之一。
+    </string>
+</resources>

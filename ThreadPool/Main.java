@@ -17,13 +17,18 @@ public class Main {
             this.x = x;
         }
 
+        public String toString() {
+            return "休眠" + x + "秒";
+        }
+
         public void run() {
             try {
                 TimeUnit.SECONDS.sleep(x);
             } catch (InterruptedException e) {
                 e.printStackTrace();
             }
-            System.out.println("======>休眠" + x + "秒的任务已由" + Thread.currentThread().getName() + "线程完成");
+            System.out.println("========================================================================>休眠" +
+                    x + "秒的任务已由" + Thread.currentThread().getName() + "线程完成");
         }
     }
 
@@ -36,6 +41,9 @@ public class Main {
                 TimeUnit.MILLISECONDS, 100L, blockingQueue, threadFactory);
 
         threadPool.execute(new Task(30L));
+
+        TimeUnit.SECONDS.sleep(3);
+
         threadPool.execute(new Task(20L));
         threadPool.execute(new Task(10L));
         threadPool.execute(new Task(40L));
@@ -50,12 +58,12 @@ public class Main {
         threadPool.execute(new Task(63L));
         threadPool.execute(new Task(64L));
         threadPool.execute(new Task(65L));
-        threadPool.execute(new Task(100L));
+        threadPool.execute(new Task(86L));
         threadPool.execute(new Task(67L));
         threadPool.execute(new Task(68L));
         threadPool.execute(new Task(69L));
 
-        TimeUnit.MINUTES.sleep(3);
+        TimeUnit.MINUTES.sleep(2);
 
         threadPool.execute(new Task(90));
         threadPool.execute(new Task(91));
@@ -67,13 +75,12 @@ public class Main {
         threadPool.execute(new Task(97));
         threadPool.execute(new Task(98));
         threadPool.execute(new Task(99));
+        threadPool.execute(new Task(100));
         threadPool.execute(new Task(101));
         threadPool.execute(new Task(102));
         threadPool.execute(new Task(103));
         threadPool.execute(new Task(104));
         threadPool.execute(new Task(105));
         threadPool.execute(new Task(106));
-        threadPool.execute(new Task(107));
-        threadPool.execute(new Task(108));
     }
 }
